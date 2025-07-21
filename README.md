@@ -1,7 +1,7 @@
-# MLE Learning Journey
+# Demystifying MLE from scratch
 
-This repo captures my from-scratch path into Machine Learning Engineering. Instead of jumping straight into high-level libraries, I'm building up core algorithms, vectorized logic, and practical intuition one step at a time.
+This repo captures my from-scratch path into Machine Learning Engineering.Instead of jumping straight into prebuilt tools, I'm manually implementing core ML models and workflows, including linear regression, classification, SVMs, neural networks, and different model architectures.
 
-It's less about wrapping functions and more about understanding what happens under the hood—whether it's computing covariance, PCA, or building models manually. Every script reflects real learning moments, mistakes included.
+The goal: understand every piece deeply—how models learn, optimize, and generalize. It’s not just about making things work, but about making sense of what’s working and why.
 
-This isn’t a course, it’s the process—raw, experimental, and meant to build deep confidence before scaling up into production-level ML.
+Raw. Ground-up. Focused on confidence over shortcuts.
