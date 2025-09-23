@@ -1,5 +1,6 @@
 -- =====================================================
 -- Problem: Find candidates who have all three skills
+-- Source: https://datalemur.com/questions/matching-skills
 -- Task: Return candidate_ids of users who have Python,
 --       Tableau, and PostgreSQL skills.
 -- =====================================================
