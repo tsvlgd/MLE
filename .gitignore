@@ -1,1 +1,6 @@
 "init_foundation.sh" 
+# Jupyter Notebook
+.ipynb_checkpoints
+
+*.zip
+m_db/
