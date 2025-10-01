@@ -33,7 +33,7 @@ To deeply understand *how* models learn, optimize, and generalize. It’s not ju
 
 ## 📈 Star History
 
-![Star History Chart](https://api.star-history.com/svg?repos=Savvythelegend/MLE&type=Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Savvythelegend/MLE&type=Date)](https://www.star-history.com/#Savvythelegend/MLE&Date)
 
 ---
 
