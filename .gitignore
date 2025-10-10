@@ -4,7 +4,6 @@
 
 *.zip
 m_db/
-.gitattributes
 .DS_Store
 .vscode/
 __pycache__/
