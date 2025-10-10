@@ -16,23 +16,18 @@ To deeply understand *how* models learn, optimize, and generalize. It’s not ju
 ---
 
 ## 📂 Directory Structure
-
-<custom-element data-json="%7B%22type%22%3A%22table-metadata%22%2C%22attributes%22%3A%7B%22title%22%3A%22Directory%20Structure%22%7D%7D" />
-
-| Directory/File       | Description                                                                 |
-|----------------------|-----------------------------------------------------------------------------|
-| `data/`              | Datasets for experiments and model training.                               |
-| `docs/`              | Notes, explanations, and conceptual deep dives.                           |
-| `implementations/`   | Manual implementations of ML models (e.g., regression, classification).   |
-| `notes/`             | Study notes, code snippets, and external resources.                        |
-| `programming/`       | Language-specific resources (Python, SQL).                                  |
-| `projects/`          | End-to-end projects (e.g., time series analysis).                           |
-| `tests/`             | Unit tests and validation scripts.                                          |
+   Directory/File       | Description                                                                 |
+ |----------------------|-----------------------------------------------------------------------------|
+ | `data/`              | Datasets for experiments and model training.                               |
+ | `docs/`              | Notes, explanations, and conceptual deep dives.                           |
+ | `implementations/`   | Manual implementations of ML models (e.g., regression, classification).   |
+ | `kaggle/`            | Kaggle competition exercises and notebooks.                                 |
+ | `projects/`          | End-to-end projects (e.g., time series analysis, phishing detection).      |
+ | `utils/`             | Reusable utility scripts and helper functions.                             |
 
 ---
 
 ## 📈 Star History
-
 [![Star History Chart](https://api.star-history.com/svg?repos=Savvythelegend/MLE&type=Date)](https://www.star-history.com/#Savvythelegend/MLE&Date)
 
 ---
@@ -40,37 +35,28 @@ To deeply understand *how* models learn, optimize, and generalize. It’s not ju
 ## Repository Overview
 
 ### 1. **Data**
-- **Location:** `data/datasets/archive/`
-- **Example:** `heart_failure_clinical_records_dataset.csv`
-  A dataset for experimenting with classification and regression models.
+- **Location:** `data/`
+  - Example: `heart_failure_clinical_records_dataset.csv`
+    A dataset for experimenting with classification and regression models.
 
-### 2. **Documentation**
-- **Location:** `docs/`
-  - `gradients.md`: Deep dive into gradient-based optimization.
-  - `linear-nonlinear.md`: Linear vs. nonlinear models—tradeoffs and intuition.
-  - `prompt.md`: Notes on prompt engineering for ML workflows.
-
-### 3. **Implementations**
+### 2. **Implementations**
 - **Location:** `implementations/`
   - **Regression:** Manual implementation of logistic regression ([`logistic_regression.ipynb`](implementations/regression/logistic_regression.ipynb)).
-  - **Upcoming:** SVMs, neural networks, and custom architectures.
+  - **Trees:** Decision trees from scratch ([`decision_trees_hands_on.ipynb`](implementations/trees/decision_trees_hands_on.ipynb)).
+  - **Dimensionality Reduction:** PCA and SVD implementations ([`principal_component_analysis_from_scratch.ipynb`](implementations/dimensionality_reduction/principal_component_analysis_from_scratch.ipynb)).
 
-### 4. **Notes**
-- **Location:** `notes/Machine-Learning-with-Pytorch-Scikit-Learn/`
-  - Study notes and utility scripts (e.g., [`plot_decision_regions_script.py`](notes/Machine-Learning-with-Pytorch-Scikit-Learn/utils/plot_decision_regions_script.py)).
+### 3. **Kaggle**
+- **Location:** `kaggle/intermediateML/`
+  - Kaggle exercises: Data leakage, pipelines, XGBoost, and categorical variables.
 
-### 5. **Programming Resources**
-- **Location:** `programming/`
-  - **Python:** Intuition-driven notes ([`intuition.md`](programming/python/intuition.md)).
-  - **SQL:** Practice queries for data science (e.g., [`Data-Science-Skills_Linkedin.sql`](programming/sql/easy/Data-Science-Skills_Linkedin.sql)).
-
-### 6. **Projects**
+### 4. **Projects**
 - **Location:** `projects/`
-  - **Time Series:** End-to-end data pipeline ([`hf_data_pipeline.ipynb`](projects/time_series/hf_data_pipeline.ipynb)).
+  - **Heart Failure Prediction:** End-to-end prediction system ([`Heart_Failure_Prediction.ipynb`](projects/Heart%20Failure%20Prediction%20System/Heart_Failure_Prediction.ipynb)).
+  - **Time Series:** Data pipeline for time series analysis ([`hf_data_pipeline.ipynb`](projects/time_series/hf_data_pipeline.ipynb)).
 
-### 7. **Tests**
-- **Location:** `tests/`
-  Placeholder for unit tests and validation scripts.
+### 5. **Utilities**
+- **Location:** `utils/`
+  - Reusable helper functions for data loading, preprocessing, and visualization.
 
 ---
 
