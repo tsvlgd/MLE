@@ -1,5 +1,5 @@
 # Force Jupyter Notebooks to be counted as Python
-*.ipynb linguist-language=Python
+*.ipynb linguist-language=Jupyter Notebook
 
 # Force Python files to be counted as Python (default, but explicit)
 *.py linguist-language=Python
