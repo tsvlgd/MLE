@@ -3,8 +3,8 @@
 Goal: reorganize `advanced_ml/` to follow a clear numbered-topic layout like the JINO-ROHIT example. Keep history (use git mv) and perform moves on a review branch.
 
 Current relevant items (detected):
-- `advanced_ml/neural_net/` — contains `notebooks/NN_from_scratch.ipynb` and `Readme.md`
-- `advanced_ml/pytorch-opencv/` — exists as a topic folder
+- `advanced_ml/01-neural-nets/neural_net/` — contains `notebooks/NN_from_scratch.ipynb` and `Readme.md`
+- `advanced_ml/02-pytorch-opencv/pytorch-opencv/` — exists as a topic folder
 
 Proposed target layout (example):
 - `advanced_ml/01-backprop-by-hand/`  <- move `neural_net/` here (or create `01-neural-net` if you prefer)
@@ -17,10 +17,10 @@ Suggested safe process (manual review required):
 
 2. Create destination folders and move files with git mv (example):
    mkdir -p advanced_ml/01-backprop-by-hand
-   git mv advanced_ml/neural_net advanced_ml/01-backprop-by-hand/neural_net
+   git mv advanced_ml/01-neural-nets/neural_net advanced_ml/01-backprop-by-hand/neural_net
 
    mkdir -p advanced_ml/02-pytorch-opencv
-   git mv advanced_ml/pytorch-opencv advanced_ml/02-pytorch-opencv
+   git mv advanced_ml/02-pytorch-opencv/pytorch-opencv advanced_ml/02-pytorch-opencv
 
 3. Flatten inner structure where appropriate and add topic README files with purpose and links.
    e.g. move `advanced_ml/01-backprop-by-hand/neural_net/notebooks/NN_from_scratch.ipynb` up to `advanced_ml/01-backprop-by-hand/` if desired:

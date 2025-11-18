@@ -14,20 +14,20 @@ Recommended top-level layout
 - `REPO_STRUCTURE.md` (this file): documentation of the canonical layout and migration commands.
 - `datasets/` : raw datasets and small sample CSVs. Keep data that is OK to store in repo. For larger data, add `datasets/README.md` pointing to remote sources.
 - `ml/` : primary learning material and implementations. Split into:
-  - `ml/docs/` : curated, polished documentation and tutorials (user-facing). Keep short-form guides here.
-  - `ml/notes/` : personal/raw notes, long-form explorations, and book notes kept for reference.
-  - `ml/implementations/` : runnable code and notebooks implementing algorithms (not just notes). Use consistent naming: `topic_description.ipynb`.
-  - `ml/kaggle/` : competition notebooks (if many, keep as separate subfolder per competition).
-  - `ml/projects/` : end-to-end projects with `README.md` explaining steps and requirements.
-  - `ml/utils/` and `ml/scripts/` : helper scripts and small reusable modules.
-- `advanced_ml/` : deep dives, active learning tracks, or advanced follow-along course repositories. Treat this as an "in-progress curriculum" space. Keep an explicit `advanced_ml/README.md` describing ongoing learning and the convention to move polished content into `ml/docs/` or `ml/implementations/` when stable.
+  - `ml/01-docs/docs/` : curated, polished documentation and tutorials (user-facing). Keep short-form guides here.
+  - `ml/03-notes/notes/` : personal/raw notes, long-form explorations, and book notes kept for reference.
+  - `ml/02-implementations/implementations/` : runnable code and notebooks implementing algorithms (not just notes). Use consistent naming: `topic_description.ipynb`.
+  - `ml/04-kaggle/kaggle/` : competition notebooks (if many, keep as separate subfolder per competition).
+  - `ml/05-projects/projects/` : end-to-end projects with `README.md` explaining steps and requirements.
+  - `ml/07-utils/utils/` and `ml/06-scripts/scripts/` : helper scripts and small reusable modules.
+- `advanced_ml/` : deep dives, active learning tracks, or advanced follow-along course repositories. Treat this as an "in-progress curriculum" space. Keep an explicit `advanced_ml/README.md` describing ongoing learning and the convention to move polished content into `ml/01-docs/docs/` or `ml/02-implementations/implementations/` when stable.
 - `programming/` : language-specific notes and experiments (e.g., `programming/python/`). Keep as-is but add `README.md` to describe purpose.
 - `tests/` : keep small tests or CI artifacts.
 
 Naming conventions and small rules
 - Notebooks: `NN_01_title.ipynb` or `topic_short-desc.ipynb` (avoid spaces if you plan to run from scripts). Keep a short `index.md` or `README.md` in each folder.
 - READMEs: every top-level and mid-level folder should have a `README.md` with 1-2 line purpose + index.
-- Duplicates: If you have `ml/docs/` and `ml/notes/` content on the same topic, keep the polished tutorial in `ml/docs/` and keep raw explorations in `ml/notes/` with a pointer to the docs.
+- Duplicates: If you have `ml/01-docs/docs/` and `ml/03-notes/notes/` content on the same topic, keep the polished tutorial in `ml/01-docs/docs/` and keep raw explorations in `ml/03-notes/notes/` with a pointer to the docs.
 
 Migration strategy (safe, reviewable)
 1. Add index/README files (done). These don't move files and make intentions explicit.
@@ -40,11 +40,11 @@ Example commands (run in repo root):
 git checkout -b reorg/ml-structure
 
 # move a single notebook into the implementations folder
-git mv "ml/implementations/dimensionality_reduction/svd_imgcompress.ipynb" "ml/implementations/dimensionality_reduction/svd_imgcompress.ipynb"
+git mv "ml/02-implementations/implementations/dimensionality_reduction/svd_imgcompress.ipynb" "ml/02-implementations/implementations/dimensionality_reduction/svd_imgcompress.ipynb"
 
-# move many files (example: move all 'notes' on a topic into 'ml/notes')
-mkdir -p ml/notes/old_notes_backup
-git mv ml/docs/some-topic* ml/notes/old_notes_backup/
+# move many files (example: move all 'notes' on a topic into 'ml/03-notes/notes')
+mkdir -p ml/03-notes/notes/old_notes_backup
+git mv ml/01-docs/docs/some-topic* ml/03-notes/notes/old_notes_backup/
 
 # show changes and commit
 git status --short
@@ -57,7 +57,7 @@ Caveats & link-fixes
 
 ```bash
 # find references to an old path
-grep -R "ml/docs/some-topic" -n
+grep -R "ml/01-docs/docs/some-topic" -n
 # or from python to programatically update links in notebooks
 python tools/fix_notebook_links.py
 ```
@@ -73,4 +73,4 @@ Higher-risk follow-ups (I will not do automatically):
 - Bulk `git mv` of many files — do on a branch after you accept the mapping.
 - Programmatic updates inside notebooks (I can prepare a script and run it on a branch if you want).
 
-If you want, tell me one or two folders you'd like moved first (example: move `ml/notes/Working with bigger data*` into `ml/docs/`), and I'll prepare the exact `git mv` commands and a branch with the moves for review.
+If you want, tell me one or two folders you'd like moved first (example: move `ml/03-notes/notes/Working with bigger data*` into `ml/01-docs/docs/`), and I'll prepare the exact `git mv` commands and a branch with the moves for review.
