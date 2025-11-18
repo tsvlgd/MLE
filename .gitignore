@@ -1,9 +1,13 @@
-"init_foundation.sh" 
+init_foundation.sh
 # Jupyter Notebook
 .ipynb_checkpoints
+
+advanced_ml/MIGRATION_PLAN.md
 
 *.zip
 m_db/
 .DS_Store
 .vscode/
 __pycache__/
+
+tools/
