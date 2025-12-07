@@ -1,9 +1,9 @@
 ## plan of attack
-    - [x]  we’ll build a simple nn
-    - [x]  train it on a real world dataset
-    - [x]  we’ll mimic the pytorch workflow and have 
-            a lot of manual elements
-    - [x]  and yes, our end goal isn’t about improving accuracy but to understand the foundation (training pipeline_)
+
+- [x]  we’ll build a simple nn
+- [x]  train it on a real world dataset
+- [x]  we’ll mimic the pytorch workflow and have a lot of manual elements
+- [x]  and yes, our end goal isn’t about improving accuracy but to understand the foundation (training pipeline_)
 
 ---
 ![alt text](image.png)
